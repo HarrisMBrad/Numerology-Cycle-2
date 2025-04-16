@@ -1,0 +1,65 @@
+# 🌐 TITAN CONFIG FILE
+# File: /src/system/titan-config.yaml
+# Description: Core configuration for Voro8 Context Engine & Cycle-1 flow
+# Author: Brad Harris (brforeal)
+# Date: 2025-04-16
+
+titan:
+  cycle: 1
+  title: Presence
+  numerology:
+    value: 1
+    theme: Initiation
+    phaseLabel: "Start of PhaseCore Loop"
+    next: 2
+    signalDate: "2025-04-14"
+
+identity:
+  owner: brforeal
+  active_roles:
+    - brforeal@gmail.com
+    - brforeal.dev@gmail.com
+    - bmichaelh13@gmail.com
+  alignment_tag: Navigator-1
+
+tasks:
+  - id: KPI_001
+    name: Keep Presence(1)
+    focus: Grounding signal
+  - id: KPI_002
+    name: Keep Presence(2)
+    focus: Movement with intent
+  - id: KPI_003
+    name: Keep Presence(3)
+    focus: Echo with clarity
+
+phaseCore:
+  current: 1
+  map:
+    1: Presence
+    2: Planning
+    3: Action
+    4: Reflection
+    5: Correction
+    6: Connection
+    7: Rest
+    8: Recalibration
+    9: Release + Restart
+
+context_engine:
+  active: true
+  memory_layer: MAL
+  mindset_recursion: true
+  status_log: "./logs/2025-04-16_onUpdate_TITAN-TALK.md"
+  lastCheckpoint: 2025-04-16T12:00:00Z
+
+directives:
+  - Maintain presence first
+  - Track phase progression
+  - Align logs with numerology signal
+  - Echo insights into EOD records
+
+export:
+  toMarkdown: true
+  toLogbook: true
+  triggerOnEOD: true
