@@ -1,6 +1,20 @@
+// App.js
+import React from 'react';
+import NumerologyCycleStarter from './components/NumerologyCycleStarter';
 import React, { useState, useEffect } from 'react';
-  import { numerology5_directives } from '../logs/Numerology5_Tasks_042825.js';
-  import { phaseClock, taskChecklist } from '../logs/test_numerology4.js';
+
+function App() {
+  return (
+    <div>
+      <h1>Welcome to the Numerology Cycle Tracker</h1>
+      <NumerologyCycleStarter />
+      {/* Other components and content */}
+    </div>
+  );
+}
+
+export default App;
+// ✅ Use default export here
 
   const calculateNumerology = (dateStr) => {
       const digits = dateStr.replace(/\D/g, '').split('').map(Number);
