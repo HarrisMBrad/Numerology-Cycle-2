@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+// Yes we have a starter...
 function NumerologyCycleStarter() {
   const [clickCount, setClickCount] = useState(0);
 
