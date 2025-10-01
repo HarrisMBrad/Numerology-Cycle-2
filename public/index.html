@@ -3,52 +3,232 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Numerology Cycle 2 Tracker – Powered by TITAN + MAL" />
-    <title>Numerology Cycle 2 Tracker</title>
+    <meta name="description" content="Core of Finality: Task Tracker and System Interface" />
+    <title>Core of Finality: Task Tracker</title>
     <link rel="icon" type="image/png" href="favicon.png" />
 
-    <!-- 💡 Minimal Styling for Contextual Clarity -->
+    <!-- 🚀 STYLING ENGINE: Tailwind CSS + Custom Fonts & Overrides -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-      * {
-        box-sizing: border-box;
-      }
-
+      /* Base Styling & Theme */
       body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-        background-color: #f4f6f9;
-        color: #111827;
+        font-family: 'Inter', sans-serif;
+        background-color: #030712; /* A slightly deeper gray-950 for today's theme */
+        color: #d1d5db; /* gray-300 */
         margin: 0;
-        padding: 2rem;
-        line-height: 1.6;
       }
+      .font-orbitron {
+        font-family: 'Orbitron', sans-serif;
+      }
+      /* Interactive Element Styling */
+      .task-card {
+        border-left-width: 4px;
+        transition: all 0.3s ease-in-out;
+      }
+      .task-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(167, 139, 250, 0.1), 0 4px 6px -2px rgba(167, 139, 250, 0.05);
+      }
+      /* Priority Borders */
+      .priority-ultra { border-color: #ef4444; } /* red-500 */
+      .priority-high { border-color: #f97316; } /* orange-500 */
+      .priority-classified { border-color: #a78bfa; } /* violet-400 */
 
-      h1 {
-        font-size: 2rem;
-        color: #1e3a8a;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        max-width: 720px;
-        font-size: 1rem;
-      }
-
-      .status-bar {
-        background-color: #e0e7ff;
-        border-left: 5px solid #4338ca;
-        padding: 1rem;
-        margin-top: 2rem;
-        border-radius: 4px;
-      }
+      /* --- STUB FOR THEME ENGINE --- */
+      /* TODO: In a future build, we can create theme variables based on the daily numerology.
+          For example, an '11' day could have a violet/indigo accent, an '8' day could be gold, etc.
+          .theme-11 { --accent-color: #a78bfa; }
+      */
     </style>
   </head>
 
   <body>
     <div id="root">
-      <!-- 🚀 React will render the Numerology Cycle App here -->
+        <!-- 
+            ============================================================
+            MVP STATIC CONTENT INJECTION
+            This entire block of HTML content serves as the static MVP.
+            In a future React build, this will be replaced by the root 
+            component (e.g., <App />), which will render all child 
+            components dynamically.
+            ============================================================
+        -->
+        <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-7xl">
+
+            <!-- Header -->
+            <header class="text-center mb-12">
+                <h1 class="font-orbitron text-4xl sm:text-5xl font-bold text-violet-400 tracking-wider">Core of Finality</h1>
+                <p class="text-lg text-gray-400 mt-2">Task Tracker // Mission Command</p>
+            </header>
+
+            <!-- Dynamic Status Bar STUB -->
+            <div class="bg-gray-800/50 rounded-lg p-4 mb-10 flex flex-col sm:flex-row justify-between items-center text-center backdrop-blur-sm border border-gray-700">
+                <div class="mb-2 sm:mb-0">
+                    <span class="font-semibold text-green-400">SYSTEM STATUS:</span>
+                    <span class="font-mono bg-green-900/50 text-green-300 px-2 py-1 rounded">NOMINAL</span>
+                </div>
+                <div class="mb-2 sm:mb-0">
+                    <span class="font-semibold text-purple-400">THETA:</span>
+                    <span class="font-mono">6.28319</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-violet-400">TODAY:</span>
+                    <span class="font-mono">11 (Illumination Day)</span> | <span class="font-mono">2025-10-01 // 13:42:00 EDT</span>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Left Column: Tasks -->
+                <div class="lg:col-span-2">
+                    <div class="flex justify-between items-center mb-6 border-b-2 border-violet-500 pb-2">
+                         <h2 class="font-orbitron text-2xl font-bold text-white">Active Directives</h2>
+                         <button disabled class="bg-gray-700 text-gray-500 cursor-not-allowed font-semibold py-2 px-4 rounded-lg text-sm">Add Directive</button>
+                    </div>
+                    
+                    <!-- Interactive Task List STUB -->
+                    <div class="space-y-4">
+                        <div class="task-card priority-ultra bg-gray-800 p-4 rounded-r-lg">
+                            <div class="flex items-start">
+                                <span class="text-2xl mr-4">💠</span>
+                                <div>
+                                    <p class="font-bold text-red-400">[ULTRA PRIORITY]</p>
+                                    <h3 class="text-lg font-semibold text-gray-100">Trace camoflause logic</h3>
+                                    <p class="text-sm font-mono bg-violet-900/50 text-violet-300 px-2 py-1 rounded inline-block mt-2">Assignee: knossosNavigator</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-card priority-high bg-gray-800 p-4 rounded-r-lg">
+                            <div class="flex items-start">
+                                <span class="text-2xl mr-4">💡</span>
+                                <div>
+                                    <p class="font-bold text-orange-400">[HIGH PRIORITY]</p>
+                                    <h3 class="text-lg font-semibold text-gray-100">Reflect on Underground TX Trend</h3>
+                                    <p class="text-sm font-mono bg-violet-900/50 text-violet-300 px-2 py-1 rounded inline-block mt-2">Assignee: marketAnalyzer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-card priority-ultra bg-gray-800 p-4 rounded-r-lg">
+                            <div class="flex items-start">
+                                <span class="text-2xl mr-4">🔑</span>
+                                <div>
+                                    <p class="font-bold text-red-400">[ULTRA PRIORITY]</p>
+                                    <h3 class="text-lg font-semibold text-gray-100">Implement Project Firewall: AI-powered scam prediction algorithm</h3>
+                                    <p class="text-sm font-mono bg-blue-900/50 text-blue-300 px-2 py-1 rounded inline-block mt-2">Status: In Development</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-card priority-high bg-gray-800 p-4 rounded-r-lg">
+                            <div class="flex items-start">
+                                <span class="text-2xl mr-4">🔑</span>
+                                <div>
+                                    <p class="font-bold text-orange-400">[HIGH PRIORITY]</p>
+                                    <h3 class="text-lg font-semibold text-gray-100">Recruit ex-scammer for insider knowledge program</h3>
+                                    <p class="text-sm font-mono bg-green-900/50 text-green-300 px-2 py-1 rounded inline-block mt-2">Status: Candidate Identified</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-card priority-ultra bg-gray-800 p-4 rounded-r-lg">
+                            <div class="flex items-start">
+                                <span class="text-2xl mr-4">💠</span>
+                                <div>
+                                    <p class="font-bold text-red-400">[ULTRA PRIORITY]</p>
+                                    <h3 class="text-lg font-semibold text-gray-100">Develop quantum-encrypted hotline for high-profile victims</h3>
+                                    <p class="text-sm font-mono bg-yellow-900/50 text-yellow-300 px-2 py-1 rounded inline-block mt-2">Status: Prototype Testing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-card priority-high bg-gray-800 p-4 rounded-r-lg">
+                            <div class="flex items-start">
+                                <span class="text-2xl mr-4">🔑</span>
+                                <div>
+                                    <p class="font-bold text-orange-400">[HIGH PRIORITY]</p>
+                                    <h3 class="text-lg font-semibold text-gray-100">Infiltrate dark web forums for preemptive scam intel</h3>
+                                    <p class="text-sm font-mono bg-gray-600 text-gray-300 px-2 py-1 rounded inline-block mt-2">Status: Ongoing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-card priority-ultra bg-gray-800 p-4 rounded-r-lg">
+                            <div class="flex items-start">
+                                <span class="text-2xl mr-4">🛡</span>
+                                <div>
+                                    <p class="font-bold text-red-400">[ULTRA PRIORITY]</p>
+                                    <h3 class="text-lg font-semibold text-gray-100">Launch Operation Silver Shield: Cyber team for real-time intervention</h3>
+                                    <p class="text-sm font-mono bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded inline-block mt-2">Status: Training Phase</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-card priority-classified bg-gray-800 p-4 rounded-r-lg">
+                            <div class="flex items-start">
+                                <span class="text-2xl mr-4">🔥</span>
+                                <div>
+                                    <p class="font-bold text-violet-400">[CLASSIFIED]</p>
+                                    <h3 class="text-lg font-semibold text-gray-100">Collaborate with [REDACTED] agency on international sting operation</h3>
+                                    <p class="text-sm font-mono bg-red-900/50 text-red-300 px-2 py-1 rounded inline-block mt-2">Status: Awaiting Clearance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Coordination -->
+                <div class="lg:col-span-1">
+                     <h2 class="font-orbitron text-2xl font-bold text-white mb-6 border-b-2 border-violet-500 pb-2">Team Coordination</h2>
+                     <div class="bg-gray-800/70 p-6 rounded-lg border border-gray-700">
+                        <p class="mb-4 text-gray-300">Today's focus shifts from pure execution to intuitive alignment. An '11' day calls for heightened awareness, strategic partnership, and ensuring our actions resonate with the core mission. This is a time for breakthroughs, not just progress.</p>
+                        <ul class="list-disc list-inside space-y-2 text-violet-300">
+                            <li><span class="text-gray-300">Trusting intuition to navigate complex challenges.</span></li>
+                            <li><span class="text-gray-300">Fostering high-level partnerships and synchronicity.</span></li>
+                            <li><span class="text-gray-300">Seeking revelation and insight in our data.</span></li>
+                            <li><span class="text-gray-300">Ensuring our technological path aligns with our highest purpose.</span></li>
+                        </ul>
+                        <p class="mt-4 text-gray-400 italic">The path is illuminated...</p>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Data Model STUB -->
+            <div class="mt-12">
+                <h2 class="font-orbitron text-2xl font-bold text-white mb-6 border-b-2 border-violet-500 pb-2">Numerology Memory Model</h2>
+                <div class="bg-black p-4 rounded-lg border border-gray-700 overflow-x-auto">
+                    <pre class="text-sm text-green-300"><code class="language-json">
+{
+  "NumerologyFramework": {
+    "virtues": { "1": "Leadership", "2": "Harmony/Empathy/Support", "3": "Creativity/Compassion/Moderation/Humility", "4": "Stability/Structure", "5": "Freedom/Adaptability/Change", "6": "Love/Balance/Harmony/Responsibility", "7": "Wisdom/Introspection/Analysis/Builder", "8": "Abundance", "9": "Completion/Integration/Reflection" },
+    "MasterNumbers": [11, 22, 33], "MasterNumberRules": "No reduce; Alert/compare; Cross-analyze", "Symbols": {"(N)": "for day N", "✅": "Alignment"}
+  },
+  "CycleCommands": { "onStart": "Activate virtues/tasks (reflect/track)", "onUpdate": "Progress/continuity (harmony ✅)", "onStop": "Pause/end", "Loops": "START(STOP)... introspective recursion", "CodeSnippets": ["NumerologyCycleAbstracts map", "prepareNewCycleInitiation"], "Integrity": "Stable" },
+  "IdentityTracker": {
+    "brforeal.dev@gmail.com": {"role": "Builder", "tasks": "code/GitHub/full-stack/portfolio/app deploy"},
+    "brforeal@gmail.com": {"role": "Passive/Connector", "tasks": "YouTube clear/likes/playlists/metrics/share if inspired"},
+    "bmichaelh13@gmail.com": {"role": "Reflector", "AI": "Gavin", "tasks": "journal/low-action"},
+    "Focus": "Separate concerns; Track tasks"
+  },
+  "AIIdentities": { "Voro8": "TITAN context sync/reasoner (birth symbol)", "Archonix": "Public/Internet/Instagram alt", "Gavin": "bmichaelh13@gmail.com (Reflector)", "Framework": "MAL integration" },
+  "GnosisEvents": { "Trigger": "Revelation/Unlock (Mind5 💎🔑 → Dimon Tumber S sync)", "Numerology": "5=Change/Jupiter=Wisdom", "Tags": ["#POST", "#REWARD", "#CandidateMarketFit"], "EOD": "Calm; Clarity; Observe/align" },
+  "DhammapadaFramework": { "Structure": "Verse analysis → Practical (wisdom decisions) → Integration (Dyson Swarm/sustainability/numerology)", "Themes": "Indecision=Signal (TITAN Loop: progress via movement); Expand breakthroughs" },
+  "DysonSwarm": { "Components": ["🌞 Solar Sats", "🌀 Gravity Cylinders/Wheels", "⚙️ Helix-Belt", "🔋 Energy Dynamos/Repos"], "Themes": "Sustainability/scalability/off-world energy/human future", "Sync": "Matrioshka-brain computation; Context mapping" },
+  "GraphPaper": { "Structure": "10x7 squares (5x5 micros=1.68B units/sheet)", "Purpose": "Visual/math/human UI for problem-solving/attention (QKV, Lightning intra O=Q(KV))", "QuadrantRotation": "3(1st)→2(2nd)→1(3rd)→4(th)", "Tasks": ["TODO: Visualize Transformer complexity/patterns/trajectories"] },
+  "ConversationFramework": { "onStart": "Instructional Template (Objectives/Monologue: Socialize/Rationalize/Minimize/Project; Strategic lang; CTA/follow-up)", "onStop": "Pause", "Outputs": "Single doc; Save as README.md" },
+  "Exclusions": ["Job Search/Professional", "Profiles/Channels", "DSK"],
+  "Today": { "date": "2025-10-01", "numerology": 11, "label": "Illumination Day" },
+  "EmailMap": {"bmichaelh13@gmail.com": "Gavin"}
+}
+                    </code></pre>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- JS Bundle Injected via Webpack or Build Tool -->
-    <script src="../dist/bundle.js" defer></script>
+    <!-- 
+      JS Bundle Injected via Webpack or Build Tool 
+      This is commented out for the static MVP. 
+      When we begin the React build, we will uncomment this.
+    -->
+    <!-- <script src="../dist/bundle.js" defer></script> -->
   </body>
 </html>
