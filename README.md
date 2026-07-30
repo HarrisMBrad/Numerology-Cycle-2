@@ -50,7 +50,11 @@ All **Cycle-2** robots have completed their mandate. Their directives are now be
 
 ## 📈 Next Steps (Cycle-3 Development Plan)
 
-1.  **FEAT:** Implement the core **Life Path** and **Personal Year** calculation logic in `numerologyUtils.js` (using Test-Driven Development).
+1.  ✅ **FEAT:** Implement the core **Life Path** and **Personal Year** calculation logic in `numerologyUtils.js` (using Test-Driven Development). — `calculateLifePath` and `calculatePersonalYear` added, 8/8 tests passing.
+2.  **FEAT:** Create the initial **`BirthDateForm`** React component to capture user input.
+3.  **CHORE:** Set up initial **journaling data structure** for storage integration.## 📈 Next Steps (Cycle-3 Development Plan)
+
+1.  ✅ **FEAT:** Implement the core **Life Path** and **Personal Year** calculation logic in `numerologyUtils.js` (using Test-Driven Development). — `calculateLifePath` and `calculatePersonalYear` added, 8/8 tests passing.
 2.  **FEAT:** Create the initial **`BirthDateForm`** React component to capture user input.
 3.  **CHORE:** Set up initial **journaling data structure** for storage integration.
 
